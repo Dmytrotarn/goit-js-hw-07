@@ -110,7 +110,7 @@ button[data-create]:hover {
 }
 
 button[data-destroy] {
-  background-color: #f44336;
+  background-color: #ff4e4e;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -120,7 +120,7 @@ button[data-destroy] {
 }
 
 button[data-destroy]:hover {
-  background-color: #da291d;
+  background-color: #ff7070;
 }
 
 #boxes {
