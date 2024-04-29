@@ -9,6 +9,7 @@ const create = document.querySelector('[data-create]')
 const destroy = document.querySelector('[data-destroy]')
 const boxes = document.querySelector('#boxes')
 
+
 create.addEventListener('click', handleCreate)
 destroy.addEventListener('click', handleDestroy)
 
@@ -24,14 +25,16 @@ function handleCreate() {
 
 function createBoxes(amount) {
   let size = 30;
+  const fragment = document.createDocumentFragment()
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(box);
+    fragment.appendChild(box);
     size += 10;
   }
+  boxes.appendChild(fragment)
 }
 
 function handleDestroy() {
